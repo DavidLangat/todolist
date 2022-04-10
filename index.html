@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E&D To-Do list</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="task">
+        <input type="text" placeholder="To-do" />
+        <button id="add" onclick="add()" add>Add</button>
+      </div>
+      <div id="views"></div>
+    </div>
+
+    <script>
+      document.querySelector("#add").onclick = function add() {
+        //hii ni ya kuselect the add button using onclick though tukeenda tu direct tuandike function add(){} ama🤔//// yeah that would have worked actually i had that but atleast we learn different ways in which one can call a function//yeah as long as we reach the same destination😂//😁😁😂definetly/ /okay next line// okay
+
+        if (document.querySelector("#task input").value.length == 0) {
+          // this is an if statement that alerts the user if the value in the input box is zero so they cannot continue .....okay//yes if the input is null//next//exactly
+          alert("Please enter your To-Do item!!");
+        } else {
+          //if the user has input something then the else statement is executed//so for thisyes y// that is correct//though hapo kwa dollar sign i dont quite understand..// the $ sign inareturn the values in the input box ndio iprint kwa span.. like inaeka value// umeget/so inainput values kwa input box ama// yeah that si editable just display nikaa inapea span valu//whats the need of it kama kwa input box tunaeza inp//like one is supposed to input the valu then aview the inputed value thats its work now//Ooohh so ni ya kuprint hapo chini// yes thats correct//okay sawa nimeelewa so $ni return type yeah sa 4 helps pia kustore the value ndio mtu akue able to add another//okay so nikama to var ama let ama const // we can say $ is used for temporary storage//okay//next line// okay
+
+          document.querySelector("#views").innerHTML += `
+      						<div class="view">
+      							<span id="todoname">
+      								${document.querySelector("#task input").value}
+      							</span>
+      							<button class="rmv" onclick="clr()">Remove</button> <!--Hii button ya removie ndio haiwork//hii hadi ushaexplain😂-->
+      							</div>
+      				`;
+
+          var currenttodo = document.querySelectorAll(".rmv"); //hii inapea currenttodo value ya class rvm// yes which is the remove button//yeah//next line// yes continue please 😊
+
+          for (var i = 0; i < currenttodo.length; i++) {
+            //for i which is less than currenttodolist  it will increament mpaka value ya list//yes that is correct//okay next line//okay
+            currenttodo[i].onclick = function clr() {
+              //hii ni function ya kuclear zile values zenye zimekuwa created on clicking the button// yeas and it assign this function to button//yes exactly//sasa hiyo parentnode ndo sijui ni nini?// whenever on adds a list it takes that list as a node so each span becomes a node... now whenever a remove button is clicked it removes one span which was assigned to that button. that span will now be the parent node//mbona isikuwe child node?// because there is no main node kwa hiyo sa each itakua ikistand for itself//kwani hiyo item yenye mtu anaadika si parentnode ndo sa child ikuwe zenye zitaremoviwa//ukiadd the list inachukua hiyo kama parent node.. now ukiremove inatoa that node ka parent//ooh okay nimeelewa//okay better//yeah alafu si hiyo this ni ya kuselect ama// yeah like select with node is to be affected//yeah nice😁// eldelea ama ishaisha lol//imeisha na i guess hiyo remove( )ni buitin////yeah remove ni builtin function in js
+
+              this.parentNode.remove();
+            };
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

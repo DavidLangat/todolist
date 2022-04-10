@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: rgb(0, 47, 255);
+}
+
+.container {
+  position: absolute;
+  background: white;
+  width: 40%;
+  top: 40%;
+  left: 30%;
+  border-radius: 10px;
+  min-width: 400px;
+  min-height: 100px;
+  /* imekua sawa//eeh //sawa acha tustyle ya views//sawa*/
+}
+#task {
+  position: relative;
+  padding: 30px 20px;
+}
+#task input {
+  width: 75%;
+  height: 45px;
+  padding: 12px;
+  color: gray;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 2px solid blue;
+}
+
+button {
+  float: right;
+  width: 20%;
+  border: none;
+  background: bisque;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background: brown;
+  color: blue;
+} /*enu jaribu kufanya the list iende katikati // the container ama//eeh*/
+#views {
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 10px;
+}
+
+.view {
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #939697;
+  cursor: pointer;
+  background-color: #c5e1e6;
+  height: 50px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  display: flex;
+}
+.view span {
+  font-size: 15px;
+  font-weight: 400;
+}
+.view button {
+  background-color: #0a2ea4;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 100%;
+  width: 70px;
+  border-radius: 5px;
+}
+.view button:hover {
+  background-color: #1b2031;
+}
